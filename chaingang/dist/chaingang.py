@@ -74,15 +74,15 @@ def run_agent(agent_id, run_id, model="gpt-4o-mini", start_input=None):
 def build_prompt(agent, dependency_res=None):
 
     prompt = f"""Who you are:
-{agent.description}
+    {agent.description}
 
-The input data format:
-{agent.input or "No specific input format provided."}
-Your instructions:
-{agent.instructions or "No specific instructions provided."}
+    The input data format:
+    {agent.input or "No specific input format provided."}
+    Your instructions:
+    {agent.instructions or "No specific instructions provided."}
 
-The output data format:
-{agent.output or "No specific output format provided."}"""
+    The output data format:
+    {agent.output or "No specific output format provided."}"""
 
     if dependency_res:
         prompt += f"\n\nThe Input Data::\n{dependency_res}"
